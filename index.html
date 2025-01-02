@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("/assets/Fonts/Roboto-Bold.ttf");
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #c2d388;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+      }
+      .form-container {
+        background-color: #9cba2f;
+        padding: 2%;
+        width: 500px;
+        margin: 5% auto;
+        text-align: left;
+        border: 4px solid white;
+      }
+      .form-container h2 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        color: #3b4f06;
+        font-size: 140%;
+      }
+      .form-group {
+        margin-bottom: 1%;
+        border: 1px solid #ccc;
+        padding: 1%;
+        background-color: #ddee9d;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 1%;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 90%;
+      }
+      .form-group span {
+        margin-bottom: 1%;
+        font-size: 90%;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 85%; /* Decreased width further */
+        margin-bottom: 1%;
+        padding-right: 1%;
+        padding-left: 1%; /* Added left padding */
+        font-size: 90%;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Added opacity to background color */
+      }
+      .form-container input[type="text"],
+      .form-container input[type="email"],
+      .form-container input[type="tel"],
+      .form-container textarea {
+        font-family: "Roboto", sans-serif;
+        font-style: italic;
+        padding: 0.5%;
+        border: 1px solid #ccc;
+        font-size: 90%;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* Added opacity to background color */
+      }
+      .form-container input[type="radio"] {
+        margin-right: 2px;
+      }
+      .form-container .card-type span {
+        margin-right: 2%;
+        font-size: 90%;
+      }
+      .form-container button {
+        background-color: #4caf50;
+        color: white;
+        padding: 1%;
+        border: none;
+        width: 100%;
+        font-size: 100%;
+      }
+      .form-container button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Step 1: Your details</h2>
+      <div class="form-group">
+        <label for="name"><span>Name</span></label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="First and last name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email"><span>Email</span></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@domain.com"
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone"><span>Phone</span></label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Eg. +447500000000"
+        />
+      </div>
+
+      <h2>Step 2: Delivery address</h2>
+      <div class="form-group">
+        <label for="address"><span>Address</span></label>
+        <textarea
+          id="address"
+          name="address"
+          placeholder="Enter your address"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="postcode"><span>Post code</span></label>
+        <input type="text" id="postcode" name="postcode" />
+      </div>
+      <div class="form-group">
+        <label for="country"><span>Country</span></label>
+        <input type="text" id="country" name="country" />
+      </div>
+
+      <h2>Step 3: Card details</h2>
+      <div class="form-group card-type">
+        <span
+          ><input type="radio" id="visa" name="cardtype" value="visa" />
+          <label for="visa"><span>VISA</span></label></span
+        >
+        <span
+          ><input type="radio" id="amex" name="cardtype" value="amex" />
+          <label for="amex"><span>AmEx</span></label></span
+        >
+        <span
+          ><input
+            type="radio"
+            id="mastercard"
+            name="cardtype"
+            value="mastercard"
+          />
+          <label for="mastercard"><span>Mastercard</span></label></span
+        >
+      </div>
+      <div class="form-group">
+        <label for="cardnumber"><span>Card number</span></label>
+        <input type="text" id="cardnumber" name="cardnumber" />
+      </div>
+      <div class="form-group">
+        <label for="securitycode"><span>Security code</span></label>
+        <input type="text" id="securitycode" name="securitycode" />
+      </div>
+      <div class="form-group">
+        <label for="nameoncard"><span>Name on card</span></label>
+        <input
+          type="text"
+          id="nameoncard"
+          name="nameoncard"
+          placeholder="Exact name on the card"
+        />
+      </div>
+
+      <button type="submit">BUY IT!</button>
+    </div>
+  </body>
+</html>
